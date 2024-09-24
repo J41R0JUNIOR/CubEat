@@ -3,28 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
-
-/* Begin PBXBuildFile section */
-		B35E4BCA2C879B4E001E6AA2 /* CubeEatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35E4BC92C879B4E001E6AA2 /* CubeEatApp.swift */; };
-		B35E4BCC2C879B4E001E6AA2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35E4BCB2C879B4E001E6AA2 /* ContentView.swift */; };
-		B35E4BCE2C879B50001E6AA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B35E4BCD2C879B50001E6AA2 /* Assets.xcassets */; };
-		B35E4BD12C879B50001E6AA2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B35E4BD02C879B50001E6AA2 /* Preview Assets.xcassets */; };
-		B35E4BDE2C87A08D001E6AA2 /* GameManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35E4BDD2C87A08D001E6AA2 /* GameManagement.swift */; };
-		B3F54D592C94F89D0019A45F /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F54D582C94F89D0019A45F /* PlayerView.swift */; };
-/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B35E4BC62C879B4E001E6AA2 /* CubeEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CubeEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B35E4BC92C879B4E001E6AA2 /* CubeEatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeEatApp.swift; sourceTree = "<group>"; };
-		B35E4BCB2C879B4E001E6AA2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		B35E4BCD2C879B50001E6AA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B35E4BD02C879B50001E6AA2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B35E4BD22C879B50001E6AA2 /* CubeEat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CubeEat.entitlements; sourceTree = "<group>"; };
-		B35E4BDD2C87A08D001E6AA2 /* GameManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManagement.swift; sourceTree = "<group>"; };
-		B3F54D582C94F89D0019A45F /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		B3A809162C9C9D2A001F210B /* CubeEat */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = CubeEat; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B35E4BC32C879B4E001E6AA2 /* Frameworks */ = {
@@ -40,7 +28,7 @@
 		B35E4BBD2C879B4E001E6AA2 = {
 			isa = PBXGroup;
 			children = (
-				B35E4BC82C879B4E001E6AA2 /* CubeEat */,
+				B3A809162C9C9D2A001F210B /* CubeEat */,
 				B35E4BC72C879B4E001E6AA2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,44 +39,6 @@
 				B35E4BC62C879B4E001E6AA2 /* CubeEat.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		B35E4BC82C879B4E001E6AA2 /* CubeEat */ = {
-			isa = PBXGroup;
-			children = (
-				B35E4BDC2C879D83001E6AA2 /* Multiplayer */,
-				B35E4BDB2C879D45001E6AA2 /* App */,
-				B35E4BCB2C879B4E001E6AA2 /* ContentView.swift */,
-				B3F54D582C94F89D0019A45F /* PlayerView.swift */,
-				B35E4BD22C879B50001E6AA2 /* CubeEat.entitlements */,
-				B35E4BCF2C879B50001E6AA2 /* Preview Content */,
-			);
-			path = CubeEat;
-			sourceTree = "<group>";
-		};
-		B35E4BCF2C879B50001E6AA2 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				B35E4BD02C879B50001E6AA2 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		B35E4BDB2C879D45001E6AA2 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				B35E4BCD2C879B50001E6AA2 /* Assets.xcassets */,
-				B35E4BC92C879B4E001E6AA2 /* CubeEatApp.swift */,
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
-		B35E4BDC2C879D83001E6AA2 /* Multiplayer */ = {
-			isa = PBXGroup;
-			children = (
-				B35E4BDD2C87A08D001E6AA2 /* GameManagement.swift */,
-			);
-			path = Multiplayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,6 +55,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B3A809162C9C9D2A001F210B /* CubeEat */,
 			);
 			name = CubeEat;
 			productName = CubeEat;
@@ -149,8 +102,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B35E4BD12C879B50001E6AA2 /* Preview Assets.xcassets in Resources */,
-				B35E4BCE2C879B50001E6AA2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,10 +112,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B35E4BDE2C87A08D001E6AA2 /* GameManagement.swift in Sources */,
-				B35E4BCC2C879B4E001E6AA2 /* ContentView.swift in Sources */,
-				B35E4BCA2C879B4E001E6AA2 /* CubeEatApp.swift in Sources */,
-				B3F54D592C94F89D0019A45F /* PlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
