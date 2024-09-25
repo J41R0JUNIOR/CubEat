@@ -45,12 +45,7 @@ extension MultiplayerManager: GKMatchDelegate {
         // Decode the data representation of the game data.
         let gameData = decode(matchData: data)
         
-        // Update the interface from the game data.
-        if let text = gameData?.message {
-            // Add the message to the chat view.
-            let message = Message(content: text, playerName: player.displayName, isLocalPlayer: false)
-            messages.append(message)
-        } else if let score = gameData?.score {
+        if let score = gameData?.score {
             // Show the opponent's score.
             opponentScore = score
         }

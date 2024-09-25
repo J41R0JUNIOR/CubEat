@@ -138,8 +138,7 @@ class MultiplayerManager: NSObject {
         myMatch = match
         myMatch?.delegate = self
             
-        // Increment the achievement to play 10 games.
-        reportProgress()
+       
     }
     
     /// Takes the player's turn.
@@ -160,40 +159,5 @@ class MultiplayerManager: NSObject {
         } catch {
             print("Error: \(error.localizedDescription).")
         }
-    }
-    
-    // Rewarding players with achievements.
-    
-    /// Reports the local player's progress toward an achievement.
-    func reportProgress() {
-        GKAchievement.loadAchievements(completionHandler: { (achievements: [GKAchievement]?, error: Error?) in
-            let achievementID = "1234"
-            var achievement: GKAchievement? = nil
-
-            // Find an existing achievement.
-            achievement = achievements?.first(where: { $0.identifier == achievementID })
-
-            // Otherwise, create a new achievement.
-            if achievement == nil {
-                achievement = GKAchievement(identifier: achievementID)
-            }
-
-            // Create an array containing the achievement.
-            let achievementsToReport: [GKAchievement] = [achievement!]
-
-            // Set the progress for the achievement.
-            achievement?.percentComplete = achievement!.percentComplete + 10.0
-
-            // Report the progress to Game Center.
-            GKAchievement.report(achievementsToReport, withCompletionHandler: {(error: Error?) in
-                if let error {
-                    print("Error: \(error.localizedDescription).")
-                }
-            })
-
-            if let error {
-                print("Error: \(error.localizedDescription).")
-            }
-        })
     }
 }
