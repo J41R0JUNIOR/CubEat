@@ -20,3 +20,13 @@ struct Message: Identifiable {
     var playerName: String
     var isLocalPlayer = false
 }
+
+// MARK: Game Data Objects
+
+struct GameData: Codable {
+    var matchName: String
+    var playerName: String
+    var score: Int?
+    var message: String?
+    var outcome: String?
+}

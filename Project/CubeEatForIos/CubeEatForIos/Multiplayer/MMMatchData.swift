@@ -9,16 +9,6 @@ import Foundation
 import GameKit
 import SwiftUI
 
-// MARK: Game Data Objects
-
-struct GameData: Codable {
-    var matchName: String
-    var playerName: String
-    var score: Int?
-    var message: String?
-    var outcome: String?
-}
-
 extension MultiplayerManager {
     
     // MARK: Codable Game Data
@@ -28,23 +18,6 @@ extension MultiplayerManager {
     /// - Returns: A representation of game data that contains only the score.
     func encode(score: Int) -> Data? {
         let gameData = GameData(matchName: matchName, playerName: GKLocalPlayer.local.displayName, score: score, message: nil, outcome: nil)
-        return encode(gameData: gameData)
-    }
-    
-    /// Creates a data representation of a text message for sending to other players.
-    ///
-    /// - Parameter message: The message that the local player enters.
-    /// - Returns: A representation of game data that contains only a message.
-    func encode(message: String?) -> Data? {
-        let gameData = GameData(matchName: matchName, playerName: GKLocalPlayer.local.displayName, score: nil, message: message, outcome: nil)
-        return encode(gameData: gameData)
-    }
-    
-    /// Creates a data representation of the game outcome for sending to other players.
-    ///
-    /// - Returns: A representation of game data that contains only the game outcome.
-    func encode(outcome: String) -> Data? {
-        let gameData = GameData(matchName: matchName, playerName: GKLocalPlayer.local.displayName, score: nil, message: nil, outcome: outcome)
         return encode(gameData: gameData)
     }
     

@@ -162,35 +162,6 @@ class MultiplayerManager: NSObject {
         }
     }
     
-
-    
-    /// Saves the local player's score.
-    /// - Tag:saveScore
-    func saveScore() {
-        GKLeaderboard.submitScore(myScore, context: 0, player: GKLocalPlayer.local,
-            leaderboardIDs: ["123"]) { error in
-            if let error {
-                print("Error: \(error.localizedDescription).")
-            }
-        }
-    }
-    
-    /// Resets a match after players reach an outcome or cancel the game.
-    func resetMatch() {
-        // Reset the game data.
-        playingGame = false
-        myMatch?.disconnect()
-        myMatch?.delegate = nil
-        myMatch = nil
-        opponent = nil
-        messages = []
-        GKAccessPoint.shared.isActive = true
-        
-        // Reset the score.
-        myScore = 0
-        opponentScore = 0
-    }
-    
     // Rewarding players with achievements.
     
     /// Reports the local player's progress toward an achievement.
